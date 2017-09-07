@@ -41,6 +41,7 @@
 			do you decide to log these actions?</button>
 		<button id="stackoverflow" type="button" class="btn btn-primary">Stackoverflow Event Log</button>
 			
+		<p class="container"></p>
 			
 		<p class="container">${answer1} </p>
 		<p class="container">${answer2} </p>
@@ -49,6 +50,7 @@
 		<p class="container">${answer5}</p>
 		<p class="container">${answer6}</p>
 		<p class="container">${answer7}</p>
+		<p class="container">${answer8}</p>
 		
 
 	</div>

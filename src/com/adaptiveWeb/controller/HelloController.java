@@ -97,7 +97,7 @@ public class HelloController {
        		+ "and how active they are on forum");
        model.addAttribute("answer5", "5 QUESTION HYPERLINK Capturing - This shows that how user goes aroud a topic, whether he/she is explores more or"
        		+ "just interested only to a single topic also we can pn an average how many qustions they visit before getting "
-       		+ "a satisfactory annswer");
+       		+ "a satisfactory annswer. It also leads in deciding problem domain and relevant issues");
        model.addAttribute("answer6", "6 FAVAORITE Question/Answer Capturing - This can help us in suggesting more relevant anwers and questions"
        		+ "based on list of favourites");
        model.addAttribute("answer7", "7 TAG Capturing - Capturing the tags on which user clicks simply provides list of keywords they are interested in."
