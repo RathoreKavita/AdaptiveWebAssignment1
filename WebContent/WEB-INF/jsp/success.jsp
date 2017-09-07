@@ -41,6 +41,7 @@
 			do you decide to log these actions?</button>
 		<button id="stackoverflow" type="button" class="btn btn-primary">Stackoverflow Event Log</button>
 			
+			
 		<p class="container">${answer1} </p>
 		<p class="container">${answer2} </p>
 		<p class="container">${answer3}</p>
@@ -80,9 +81,11 @@
 
 
 
-
-	<button id="logoutbutton" type="button" class="btn btn-primary">Log
+	<div align="center">
+	<button id="logoutbutton" type="button" class="btn btn-primary" >Log
 			Out</button>
+			
+	</div>
 
 	<script type="text/javascript">
 		document.getElementById("myButton").onclick = function() {
