@@ -36,8 +36,7 @@
 		</div>
 		<button id="myButton" type="button" class="btn btn-primary">See
 			Your Log-In History</button>
-		<button id="logoutbutton" type="button" class="btn btn-primary">Log
-			Out</button>
+		
 		<button id="question" type="button" class="btn btn-primary">Why
 			do you decide to log these actions?</button>
 		<button id="stackoverflow" type="button" class="btn btn-primary">Stackoverflow Event Log</button>
@@ -77,6 +76,9 @@
 		</table>
 	</div>
 
+
+	<button id="logoutbutton" type="button" class="btn btn-primary">Log
+			Out</button>
 
 
 	<script type="text/javascript">
