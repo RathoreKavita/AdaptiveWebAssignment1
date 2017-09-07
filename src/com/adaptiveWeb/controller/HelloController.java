@@ -87,20 +87,22 @@ public class HelloController {
 	   HttpSession session= request.getSession();
 	   String username=(String) session.getAttribute("username");
 	   model.addAttribute("message", username);
-	   model.addAttribute("answer1", "1. Scroll-up and Scroll Down denote the "
+	   model.addAttribute("answer1", "1. SCROLL-UP and SCROLL DOWN denote the "
 	   		+ "user's browsing habit and average time he spends on the page");
-	   model.addAttribute("answer2","2. Mouse Idle time Capturing - Can capture the average idle time for a user, and amount of time they require"
+	   model.addAttribute("answer2","2. MOUSE IDLE time Capturing - Can capture the average idle time for a user, and amount of time they require"
 	   		+ "to read and analyze an answer");
-       model.addAttribute("answer3", "3 Thumb up, Thumb down Capturing - "
+       model.addAttribute("answer3", "3 THUMB UP, THUMB DOWN Capturing - "
        		+ "SHows the answers the user is interested in or things he/she dislikes");
-       model.addAttribute("answer4", "4 Comments Capturing - This displays which kind of topics user is more interested in"
+       model.addAttribute("answer4", "4 COMMENTS Capturing - This displays which kind of topics user is more interested in"
        		+ "and how active they are on forum");
-       model.addAttribute("answer5", "5 Questions hyperlink Capturing - This shows that how user goes aroud a topic, whether he/she is explores more or"
+       model.addAttribute("answer5", "5 QUESTION HYPERLINK Capturing - This shows that how user goes aroud a topic, whether he/she is explores more or"
        		+ "just interested only to a single topic also we can pn an average how many qustions they visit before getting "
        		+ "a satisfactory annswer");
-       model.addAttribute("answer6", "6 Favorite Question/Answer Capturing - This can help us in suggesting more relevant anwers and questions"
+       model.addAttribute("answer6", "6 FAVAORITE Question/Answer Capturing - This can help us in suggesting more relevant anwers and questions"
        		+ "based on list of favourites");
-       model.addAttribute("answer7", "In General, we can use all above data to profile user behavious at an individual level"
+       model.addAttribute("answer7", "7 TAG Capturing - Capturing the tags on which user clicks simply provides list of keywords they are interested in."
+    		   +"Later we can show WORD CLOUDS customized for each user instead of tags which are spread out");
+       model.addAttribute("answer8", "In General, we can use all above data to profile user behavious at an individual level"
        		+ "we can determine the knowlege level of user based on his/her searches and show incremental suggeestions based "
        		+ "on difficulty of subject and user ability to grasp");
 
