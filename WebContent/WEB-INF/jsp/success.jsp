@@ -40,6 +40,7 @@
 			Out</button>
 		<button id="question" type="button" class="btn btn-primary">Why
 			do you decide to log these actions?</button>
+		<button id="stackoverflow" type="button" class="btn btn-primary">Stackoverflow Event Log</button>
 			
 		<p class="container">${answer}
 		</p>
@@ -74,6 +75,33 @@
 
 
 
+<div align="center">
+		<table border="1" cellpadding="5">
+			<caption>
+				<h2 id="title">${title}</h2>
+			</caption>
+			<tr>
+				<th id="column1">${column1}</th>
+				<th id="column2">${column2}</th>
+
+
+			</tr>
+
+			<c:forEach var="event" items="${eventData}">
+				<tr>
+					<td>${event.timestamp}</td>
+
+					<td>${event.eventType}</td>
+
+				</tr>
+			</c:forEach>
+
+
+		</table>
+	</div>
+
+
+
 	<script type="text/javascript">
 		document.getElementById("myButton").onclick = function() {
 			var ctx = "${pageContext.request.contextPath}"
@@ -92,6 +120,11 @@
 		document.getElementById("question").onclick = function() {
 			var ctx = "${pageContext.request.contextPath}"
 			location.href = ctx + "/answer";
+		};
+		
+		document.getElementById("stackoverflow").onclick = function() {
+			var ctx = "${pageContext.request.contextPath}"
+			location.href = ctx + "/stackoverflow";
 		};
 	</script>
 

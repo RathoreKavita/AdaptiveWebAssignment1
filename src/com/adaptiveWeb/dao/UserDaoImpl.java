@@ -11,6 +11,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
 import com.adaptiveWeb.model.LoggedData;
+import com.adaptiveWeb.model.StackoverflowData;
 import com.adaptiveWeb.model.User;
 
 public class UserDaoImpl implements UserDao{
@@ -64,8 +65,31 @@ public class UserDaoImpl implements UserDao{
 		List<LoggedData> data =jdbcTemplate.query(sql, new Object[]{username}, new logininfoMapper()) ;
 		return data.size()>0? data:null;
 	}
+
+
+	public List<StackoverflowData> getStackoverflowData(String username) {
+		
+		String sql = "select * from eventinfo where username = ?";
+		List<StackoverflowData> data =jdbcTemplate.query(sql, new Object[]{username}, new eventinfoMapper()) ;
+		return data.size()>0? data:null;
+		
+	}
 	
 }
+
+
+class eventinfoMapper implements RowMapper<StackoverflowData> {
+	  public StackoverflowData mapRow(ResultSet rs, int arg1) throws SQLException {
+		  StackoverflowData eventData = new StackoverflowData();
+		  eventData.setUsername(rs.getString("username"));
+		  eventData.setTimestamp(rs.getString("timestampp"));
+		  eventData.setEvent(rs.getString("eventType"));
+	    return eventData;
+	  }
+	  
+	  
+	}
+
 
 
 class logininfoMapper implements RowMapper<LoggedData> {

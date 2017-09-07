@@ -9,6 +9,7 @@ import javax.servlet.http.HttpSession;
 import com.adaptiveWeb.dao.LoginHistoryDao;
 import com.adaptiveWeb.dao.UserDaoImpl;
 import com.adaptiveWeb.model.LoggedData;
+import com.adaptiveWeb.model.StackoverflowData;
 import com.adaptiveWeb.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
@@ -86,10 +87,23 @@ public class HelloController {
 	   HttpSession session= request.getSession();
 	   String username=(String) session.getAttribute("username");
 	   model.addAttribute("message", username);
-	   model.addAttribute("answer", "meri marzi!!!!!!! ");
+	   model.addAttribute("answer", "");
 	   return "success";
    }
    
+   @RequestMapping(value="/stackoverflow", method = RequestMethod.GET)
+   public String getStackovrflow(ModelMap model, HttpServletRequest request, HttpServletResponse response) {
+	   HttpSession session= request.getSession();
+	   String username=(String) session.getAttribute("username");
+	   List<StackoverflowData> eventdata=userDoaImpl.getStackoverflowData(username);
+	   model.addAttribute("eventData",eventdata );
+	   model.addAttribute("message", username);
+	   model.addAttribute("column1", "Time");
+	   model.addAttribute("column2", "Event");
+	   model.addAttribute("title", "Stack Overflow");
+	return "success";
+   }
+  
    
    
    @RequestMapping(value="/getInfo", method = RequestMethod.GET)

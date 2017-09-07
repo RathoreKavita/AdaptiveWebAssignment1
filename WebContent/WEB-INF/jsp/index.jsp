@@ -37,7 +37,7 @@
    <div class="line"> UserName  <input type="text"name="username" id="username" required>  </div>
   <div class="line"><br>Password      <input type="password" name="password" id="password" required></div>
   <br>
-  <input type="submit"name="button1"value="login" class="btn btn-primary">
+  <input type="submit"name="button1"value="Login" class="btn btn-primary">
   <!--  input type="submit"name="button2"value="signup"-->
   
   <button id="myButton" type="button" class="btn btn-primary">Sign Up</button>
