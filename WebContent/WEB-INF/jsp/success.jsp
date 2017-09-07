@@ -48,7 +48,7 @@
 	</div>
 
 
-	<div align="center">
+	<div align="center" id="log">
 		<table border="1" cellpadding="5">
 			<caption>
 				<h2 id="title">${title}</h2>
@@ -75,14 +75,14 @@
 
 
 
-<div align="center">
+<div align="center" id="stacck">
 		<table border="1" cellpadding="5">
 			<caption>
-				<h2 id="title">${title}</h2>
+				<h2 id="titlee">${title}</h2>
 			</caption>
 			<tr>
-				<th id="column1">${column1}</th>
-				<th id="column2">${column2}</th>
+				<th id="columnS1">${column1}</th>
+				<th id="columnS2">${column2}</th>
 
 
 			</tr>
@@ -91,7 +91,7 @@
 				<tr>
 					<td>${event.timestamp}</td>
 
-					<td>${event.eventType}</td>
+					<td>${event.event}</td>
 
 				</tr>
 			</c:forEach>
