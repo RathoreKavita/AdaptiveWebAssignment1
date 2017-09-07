@@ -119,7 +119,7 @@ public class HelloController {
 	   model.addAttribute("message", username);
 	   model.addAttribute("column1", "Time");
 	   model.addAttribute("column2", "Event");
-	   model.addAttribute("title", "Stack Overflow");
+	   model.addAttribute("title", "Stack-Overflow");
 	return "successtack";
    }
   
