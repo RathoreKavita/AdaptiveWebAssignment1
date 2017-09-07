@@ -1,4 +1,4 @@
-package com.tutorialspoint.dao;
+package com.adaptiveWeb.dao;
 
 import java.sql.Date;
 import java.text.DateFormat;

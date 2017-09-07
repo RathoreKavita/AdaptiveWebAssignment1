@@ -1,4 +1,4 @@
-package com.tutorialspoint.dao;
+package com.adaptiveWeb.dao;
 
 import javax.sql.DataSource;
 

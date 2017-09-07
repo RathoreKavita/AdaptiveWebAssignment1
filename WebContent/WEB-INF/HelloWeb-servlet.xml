@@ -6,16 +6,16 @@
    http://www.springframework.org/schema/context 
    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-   <context:component-scan base-package = "com.tutorialspoint" />
+   <context:component-scan base-package = "com.adaptiveWeb" />
 
    <bean class = "org.springframework.web.servlet.view.InternalResourceViewResolver">
       <property name = "prefix" value = "/WEB-INF/jsp/" />
       <property name = "suffix" value = ".jsp" />
    </bean>
    
-   <bean id="userDoaImpl" class="com.tutorialspoint.dao.UserDaoImpl" />
-   <bean id="eventDao" class="com.tutorialspoint.dao.EventDao" />
-   <bean id="loginHistory" class="com.tutorialspoint.dao.LoginHistoryDao" />
+   <bean id="userDoaImpl" class="com.adaptiveWeb.dao.UserDaoImpl" />
+   <bean id="eventDao" class="com.adaptiveWeb.dao.EventDao" />
+   <bean id="loginHistory" class="com.adaptiveWeb.dao.LoginHistoryDao" />
    
    
    

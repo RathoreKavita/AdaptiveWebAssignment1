@@ -1,4 +1,4 @@
-package com.tutorialspoint.dao;
+package com.adaptiveWeb.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -10,8 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
-import com.tutorialspoint.model.LoggedData;
-import com.tutorialspoint.model.User;
+import com.adaptiveWeb.model.LoggedData;
+import com.adaptiveWeb.model.User;
 
 public class UserDaoImpl implements UserDao{
 	
@@ -37,11 +37,11 @@ public class UserDaoImpl implements UserDao{
 
 	@Override
 	public void registerUser(String username, String password, String firstname, String lastname, String dateofbirth,
-			String email, String address, String phone, String postcode) {
+			String email, String address, String postcode) {
 		
-		String sql = "insert into userinfo values(?,?,?,?,?,?,?,?,?)";
+		String sql = "insert into userinfo values(?,?,?,?,?,?,?,?)";
 		System.out.println("afterSQL");
-	    int result= jdbcTemplate.update(sql, new Object[] { username, password, firstname, lastname,dateofbirth, email,phone , address,  postcode});
+	    int result= jdbcTemplate.update(sql, new Object[] { username, password, firstname, lastname,dateofbirth, email, address,  postcode});
 		System.out.println(result);
 
 	    
@@ -83,7 +83,6 @@ class UserMapper implements RowMapper<User> {
 	    user.setDateofbirth(rs.getString("dateofbirth"));
 	    user.setEmail(rs.getString("email"));
 	    user.setAddress(rs.getString("address"));
-	    user.setPhone(rs.getInt("phone"));
 	    user.setPostcode(rs.getString("postcode"));
 
 	    return user;

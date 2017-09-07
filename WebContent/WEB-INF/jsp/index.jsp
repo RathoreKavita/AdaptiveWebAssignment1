@@ -34,8 +34,8 @@
   <div id="container" class="container">
   <form name="MY Form" action="${pageContext.request.contextPath}/login" method="post">
   <br>
-   <div class="line"> UserName  <input type="text"name="username" id="username">  </div>
-  <div class="line"><br>Password      <input type="password" name="password" id="password"></div>
+   <div class="line"> UserName  <input type="text"name="username" id="username" required>  </div>
+  <div class="line"><br>Password      <input type="password" name="password" id="password" required></div>
   <br>
   <input type="submit"name="button1"value="login" class="btn btn-primary">
   <!--  input type="submit"name="button2"value="signup"-->

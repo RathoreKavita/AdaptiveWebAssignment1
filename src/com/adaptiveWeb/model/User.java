@@ -1,4 +1,4 @@
-package com.tutorialspoint.model;
+package com.adaptiveWeb.model;
 
 public class User {
 	

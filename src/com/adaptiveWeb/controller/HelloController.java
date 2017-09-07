@@ -1,4 +1,4 @@
-package com.tutorialspoint.controller;
+package com.adaptiveWeb.controller;
 
 import java.util.List;
 
@@ -6,18 +6,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.tutorialspoint.*;
+import com.adaptiveWeb.dao.LoginHistoryDao;
+import com.adaptiveWeb.dao.UserDaoImpl;
+import com.adaptiveWeb.model.LoggedData;
+import com.adaptiveWeb.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import com.tutorialspoint.dao.LoginHistoryDao;
-import com.tutorialspoint.dao.UserDaoImpl;
-import com.tutorialspoint.model.LoggedData;
-import com.tutorialspoint.model.User;
-
 import org.springframework.ui.ModelMap;
 
 @Controller
@@ -39,7 +36,7 @@ public class HelloController {
 	      return "index";
 	   } */
 	
-   @RequestMapping(value="/index", method = RequestMethod.GET)
+   @RequestMapping(value="/", method = RequestMethod.GET)
    public String getLogin(ModelMap model) {
       model.addAttribute("message", "Hello Spring MVC Framework!");
       return "index";

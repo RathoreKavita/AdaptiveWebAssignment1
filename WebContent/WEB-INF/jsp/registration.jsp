@@ -35,17 +35,16 @@
         <div id="container" class="container">
             <form action="${pageContext.request.contextPath}/register" method="post">
                 <h1>REGISTER</h1>
-                <div class="line"><label for="username">Username *: </label><input type="text" id="username" name="username" /></div>
-                <div class="line"><label for="pwd">Password *: </label><input type="password" id="password" name="password"/></div>
+                <div class="line"><label for="username">Username *: </label><input type="text" id="username" name="username" required /></div>
+                <div class="line"><label for="pwd">Password *: </label><input type="password" id="password" name="password" required/></div>
                 <!-- You may want to consider adding a "confirm" password box also -->
-                <div class="line"><label for="firstname">FirstName *: </label><input type="text" id="firstname" name="firstname" /></div>
-                <div class="line"><label for="lastname">LastName *: </label><input type="text" id="lastname" name="lastname" /></div>
-                <div class="line"><label for="dob">Date of Birth *: </label><input type="text" id="dateofbirth" name="dateofbirth" placeholder="YYYY-MM-DD" /></div>
-                <div class="line"><label for="email">Email *: </label><input type="email" id="email" name="email" /></div>
+                <div class="line"><label for="firstname">FirstName *: </label><input type="text" id="firstname" name="firstname" required /></div>
+                <div class="line"><label for="lastname">LastName *: </label><input type="text" id="lastname" name="lastname"  required/></div>
+                <div class="line"><label for="dob">Date of Birth *: </label><input type="text" id="dateofbirth" name="dateofbirth" placeholder="YYYY-MM-DD" required /></div>
+                <div class="line"><label for="email">Email *: </label><input type="email" id="email" name="email" required /></div>
                 <!-- Valid input types: http://www.w3schools.com/html5/html5_form_input_types.asp -->
-                <div class="line"><label for="tel">Telephone: </label><input type="text" id="phone" name="phone"  /></div>
-                <div class="line"><label for="add">Address *: </label><input type="text" id="address" name="address" /></div>
-                <div class="line"><label for="ptc">Post Code *: </label><input type="text" id="postcode" name="postcode" /></div>
+                <div class="line"><label for="add">Address *: </label><input type="text" id="address" name="address" required /></div>
+                <div class="line"><label for="ptc">Post Code *: </label><input type="text" id="postcode" name="postcode" required /></div>
                 <div class="line submit"><input type="submit" value="Submit" class="btn btn-primary" /></div>
  
                 <p>Note: Please make sure your details are correct before submitting form and that all fields marked with * are completed!.</p>

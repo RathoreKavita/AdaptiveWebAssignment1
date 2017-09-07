@@ -1,4 +1,4 @@
-package com.tutorialspoint.controller;
+package com.adaptiveWeb.controller;
 
 import java.io.IOException;
 
@@ -12,8 +12,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.tutorialspoint.dao.EventDao;
-import com.tutorialspoint.dao.UserDaoImpl;
+import com.adaptiveWeb.dao.EventDao;
+import com.adaptiveWeb.dao.UserDaoImpl;
 
 @Controller
 public class Any {

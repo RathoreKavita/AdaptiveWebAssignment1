@@ -1,4 +1,4 @@
-package com.tutorialspoint.controller;
+package com.adaptiveWeb.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -11,8 +11,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.tutorialspoint.dao.UserDaoImpl;
-import com.tutorialspoint.model.User;
+import com.adaptiveWeb.dao.UserDaoImpl;
+import com.adaptiveWeb.model.User;
 
 @Controller
 public class RegistrationController {
@@ -25,9 +25,9 @@ public class RegistrationController {
 		
 		
 		userDoaImpl.registerUser(request.getParameter("username"), request.getParameter("password"), request.getParameter("firstname"),request.getParameter("lastname"),
-				request.getParameter("dateofbirth"),request.getParameter("email"),request.getParameter("address"), request.getParameter("phone"),request.getParameter("postcode"));
+				request.getParameter("dateofbirth"),request.getParameter("email"),request.getParameter("address"),request.getParameter("postcode"));
 	   
-		return "login";
+		return "index";
 	
 	}
 	
