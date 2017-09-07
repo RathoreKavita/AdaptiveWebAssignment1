@@ -64,11 +64,11 @@
 
 			</tr>
 
-			<c:forEach var="event" items="${eventData}">
+			<c:forEach var="eventStack" items="${eventData}">
 				<tr>
-					<td>${event.timestamp}</td>
+					<td>${eventStack.timestamp}</td>
 
-					<td>${event.event}</td>
+					<td>${eventStack.event}</td>
 
 				</tr>
 			</c:forEach>

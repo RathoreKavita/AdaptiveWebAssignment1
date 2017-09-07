@@ -96,12 +96,13 @@ public class HelloController {
 	   HttpSession session= request.getSession();
 	   String username=(String) session.getAttribute("username");
 	   List<StackoverflowData> eventdata=userDoaImpl.getStackoverflowData(username);
+	   System.out.println(eventdata.get(0));
 	   model.addAttribute("eventData",eventdata );
 	   model.addAttribute("message", username);
 	   model.addAttribute("column1", "Time");
 	   model.addAttribute("column2", "Event");
 	   model.addAttribute("title", "Stack Overflow");
-	return "success";
+	return "successtack";
    }
   
    
