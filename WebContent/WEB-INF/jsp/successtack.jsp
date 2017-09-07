@@ -48,23 +48,27 @@
 	</div>
 
 
-	<div align="center" id="log">
+	
+
+
+
+<div align="center" id="stacck">
 		<table border="1" cellpadding="5">
 			<caption>
-				<h2 id="title">${title}</h2>
+				<h2 id="titlee">${title}</h2>
 			</caption>
 			<tr>
-				<th id="column1">${column1}</th>
-				<th id="column2">${column2}</th>
+				<th id="columnS1">${column1}</th>
+				<th id="columnS2">${column2}</th>
 
 
 			</tr>
 
-			<c:forEach var="log" items="${logData}">
+			<c:forEach var="event" items="${eventData}">
 				<tr>
-					<td>${log.timestamp}</td>
+					<td>${event.timestamp}</td>
 
-					<td>${log.eventType}</td>
+					<td>${event.event}</td>
 
 				</tr>
 			</c:forEach>
@@ -72,9 +76,6 @@
 
 		</table>
 	</div>
-
-
-
 
 
 
