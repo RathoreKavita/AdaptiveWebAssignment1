@@ -20,11 +20,21 @@ public class UserDaoImpl implements UserDao{
 	  @Autowired
 	  JdbcTemplate jdbcTemplate;
 
-	@Override
+	  @Override
 	public void register(User user) {
 		// TODO Auto-generated method stub
 		
 	}
+	  
+	  
+	/*public void createTables() {
+			// TODO Auto-generated method stub
+			String sql1 =
+		"CREATE TABLE logininfo ( username varchar(255) DEFAULT NULL, timestampp varchar(255) DEFAULT NULL,eventType varchar(255) DEFAULT NULL)";
+			String sql2="CREATE TABLE userinfo (username varchar(255) DEFAULT NULL,password varchar(255) DEFAULT NULL,firstname varchar(255) DEFAULT NULL,lastname varchar(255) DEFAULT NULL,dateofbirth date DEFAULT NULL,email varchar(255) DEFAULT NULL,address varchar(255) DEFAULT NULL,postcode varchar(255) DEFAULT NULL)";
+			jdbcTemplate.execute(sql1);
+			jdbcTemplate.execute(sql2);
+	}*/
 
 	@Override
 	public User validateUser(String username, String password) {

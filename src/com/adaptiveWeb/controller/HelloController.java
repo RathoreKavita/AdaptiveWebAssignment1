@@ -44,6 +44,9 @@ public class HelloController {
    
    @RequestMapping(value="/login", method = RequestMethod.POST)
    public String login(ModelMap model, HttpServletRequest request, HttpServletResponse response) {
+	   
+	   //userDoaImpl.createTables();
+	   
 	   User user=(User) userDoaImpl.validateUser(request.getParameter("username"), request.getParameter("password"));
 	   user1=user;
 	   if(user!=null){
@@ -58,7 +61,6 @@ public class HelloController {
 		   model.addAttribute("message","User Not Found");
 		   return "error";
 	   }
-	      
 	      
 	   }
    
