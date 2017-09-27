@@ -43,7 +43,7 @@ public class Any {
 		}
 		
 		if(username!=null){
-			eventDao.addInDatabase(request.getParameter("eventType"), request.getParameter("timeStamp"), username, "0", parent, index);
+			eventDao.addInDatabase(request.getParameter("eventType"), request.getParameter("timeStamp"), username);
 			return "hello";
 		}
 		else{

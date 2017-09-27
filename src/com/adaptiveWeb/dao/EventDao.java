@@ -24,22 +24,16 @@ public class EventDao {
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 
-	public void addInDatabase(String event, String timestamp, String username, String flag , int parent , int index) {
+	public void addInDatabase(String event, String timestamp, String username) {
 
-		String sql = "insert into eventInfo values(?,?,?,?,?,?)";
+		String sql = "insert into eventInfo values(?,?,?)";
 		System.out.println("afterSQL");
-		int result= jdbcTemplate.update(sql, new Object[] { timestamp, event, username, flag, parent, index});
+		int result= jdbcTemplate.update(sql, new Object[] { timestamp, event, username});
 		System.out.println(result);
 
 	}
 
-	public void updateRows(String username) {
-
-		String sql1 = "UPDATE eventinfo SET flag = 2 WHERE username='" + username + "' and flag='" + 1 + "'";
-		String sql2 = "UPDATE eventinfo SET flag = 1 WHERE username='" + username + "' and flag='" + 0 + "'";
-		int result1=jdbcTemplate.update(sql1);
-		int result2=jdbcTemplate.update(sql2);
-	}
+	
 
 	
 	public List<PieChartData> getPieChart(String username) {
@@ -60,11 +54,11 @@ public class EventDao {
 	}
 
 	public List<ScatterPlotData> getScatterPlot(String username) {
-		String sql1="CREATE VIEW table1 AS (SELECT username, count(eventType)as interactions FROM eventinfo GROUP BY username)"; 
-		String sql2="CREATE VIEW table2 AS (SELECT username, eventType, count(*) as totalcout from logininfo where eventType= 'Log In' GROUP BY username, eventType )";
+		//String sql1="CREATE VIEW table1 AS (SELECT username, count(eventType)as interactions FROM eventinfo GROUP BY username)"; 
+		//String sql2="CREATE VIEW table2 AS (SELECT username, eventType, count(*) as totalcout from logininfo where eventType= 'Log In' GROUP BY username, eventType )";
 		String sql3="SELECT table1.username, table2.totalcout, table1.interactions FROM table1, table2 WHERE table1.username=table2.username";
-		jdbcTemplate.execute(sql1);
-		jdbcTemplate.execute(sql2);
+		//jdbcTemplate.execute(sql1);
+		//jdbcTemplate.execute(sql2);
 		List<ScatterPlotData> data=jdbcTemplate.query(sql3, new scatterMapper());
 
 		return data;

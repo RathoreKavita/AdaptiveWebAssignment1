@@ -97,7 +97,7 @@ public class HelloController {
 		loginHistory.addlog(username, "Log out");
 		// changing 1 to 2
 		//changing 0 to 1
-		eventDao.updateRows(username);
+		//eventDao.updateRows(username);
 		session.invalidate();
 		return "index";
 	}

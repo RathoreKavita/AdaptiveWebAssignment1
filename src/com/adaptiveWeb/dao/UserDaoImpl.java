@@ -87,8 +87,8 @@ class eventinfoMapper implements RowMapper<StackoverflowData> {
 		  eventData.setUsername(rs.getString("username"));
 		  eventData.setTimestamp(rs.getString("timestampp"));
 		  eventData.setEvent(rs.getString("eventType"));
-		  eventData.setParent(rs.getInt("parent"));
-		  eventData.setFlag(rs.getString("flag"));
+		  //eventData.setParent(rs.getInt("parent"));
+		  //eventData.setFlag(rs.getString("flag"));
 
 	    return eventData;
 	  }
