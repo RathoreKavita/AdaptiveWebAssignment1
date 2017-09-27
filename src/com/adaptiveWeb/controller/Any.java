@@ -29,8 +29,21 @@ public class Any {
 		
 		HttpSession session=request.getSession();
 		String username=(String) session.getAttribute("username");
+		int parent=-2;
+		int index=-2;
+		
+		if(request.getParameter("eventType").matches("Tag:.*")){
+			 parent=(Integer) session.getAttribute("parentNo");
+			 index=(Integer) session.getAttribute("index");
+
+			 
+			session.setAttribute("parentNo", ++parent);
+			session.setAttribute("index", ++index);
+
+		}
+		
 		if(username!=null){
-			eventDao.addInDatabase(request.getParameter("eventType"), request.getParameter("timeStamp"), username);
+			eventDao.addInDatabase(request.getParameter("eventType"), request.getParameter("timeStamp"), username, "0", parent, index);
 			return "hello";
 		}
 		else{

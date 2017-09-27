@@ -1,6 +1,6 @@
-
-<%@ page contentType="text/html; charset = UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <title>Hello World</title>
@@ -30,12 +30,12 @@
 		<div>
 			<p>
 				<a
-					href="https://stackoverflow.com/questions/tagged/java?sort=frequent&pageSize=15">Direct
+					href="https://st	ackoverflow.com/questions/tagged/java?sort=frequent&pageSize=15">Direct
 					to Stackoverflow</a>
 			</p>
 		</div>
 		
-				<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Adaptive Web</a>
@@ -54,53 +54,40 @@
     
   </div>
 </nav>
+
+		<!--  button id="myButton" type="button" class="btn btn-primary">See
+			Your Log-In History</button-->
 		
 		
 		
+		<button id="pieChart" type="button" class="btn btn-primary">Pie Chart</button>
+		
+		<button id="barChart" type="button" class="btn btn-primary">Bar Chart</button>
+		<button id="bubblePlot" type="button" class="btn btn-primary">Bubble Plot</button>
+		<button id="scatterPlot" type="button" class="btn btn-primary">Scatter Plot</button>
+		<button id="findings" type="button" class="btn btn-primary">Patterns/Trends</button>
+		
+		
+		<p class="container"></p>
 			
-		<p class="container">${answer}
-		</p>
-
-	</div>
+		<p class="container">${answer1} </p>
+		<p class="container">${answer2} </p>
+		<p class="container">${answer3}</p>
+		<p class="container">${answer4}</p>
+		<p class="container">${answer5}</p>
+		<p class="container">${answer6}</p>
+		<p class="container">${answer7}</p>
+		<p class="container">${answer8}</p>
+		
+		
+</div>
 
 
 	
 
 
 
-<div align="center" id="stacck">
-		<table border="1" cellpadding="5">
-			<caption>
-				<h2 id="titlee">${title}</h2>
-			</caption>
-			<tr>
-				<th id="columnS1">${column1}</th>
-				<th id="columnS2">${column2}</th>
-
-
-			</tr>
-
-			<c:forEach var="eventStack" items="${eventData}">
-				<tr>
-					<td>${eventStack.timestamp}</td>
-
-					<td>${eventStack.event}</td>
-
-				</tr>
-			</c:forEach>
-
-
-		</table>
-	</div>
-
-	<div align="center">
 	
-	<p></p>
-	
-	<button id="logoutbutton" type="button" class="btn btn-primary">Log
-			Out</button>
-	</div>
-
 
 	<script type="text/javascript">
 		document.getElementById("myButton").onclick = function() {
@@ -127,10 +114,33 @@
 			location.href = ctx + "/stackoverflow";
 		};
 		
-		document.getElementById("visualization").onclick = function() {
+		
+		
+		document.getElementById("pieChart").onclick = function() {
 			var ctx = "${pageContext.request.contextPath}"
-			location.href = ctx + "/visualization";
+			location.href = ctx + "/pieChart";
 		};
+		
+		document.getElementById("barChart").onclick = function() {
+			var ctx = "${pageContext.request.contextPath}"
+			location.href = ctx + "/barChart";
+		};
+		
+		document.getElementById("scatterPlot").onclick = function() {
+			var ctx = "${pageContext.request.contextPath}"
+			location.href = ctx + "/scatterPlot";
+		};
+		
+		document.getElementById("bubblePlot").onclick = function() {
+			var ctx = "${pageContext.request.contextPath}"
+			location.href = ctx + "/bubblePlot";
+		};
+		
+		document.getElementById("findings").onclick = function() {
+			var ctx = "${pageContext.request.contextPath}"
+			location.href = ctx + "/findings";
+		};
+
 	</script>
 
 

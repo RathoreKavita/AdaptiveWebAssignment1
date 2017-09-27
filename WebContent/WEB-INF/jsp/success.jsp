@@ -30,16 +30,41 @@
 		<div>
 			<p>
 				<a
-					href="https://stackoverflow.com/questions/tagged/java?sort=frequent&pageSize=15">Direct
+					href="https://st	ackoverflow.com/questions/tagged/java?sort=frequent&pageSize=15">Direct
 					to Stackoverflow</a>
 			</p>
 		</div>
-		<button id="myButton" type="button" class="btn btn-primary">See
-			Your Log-In History</button>
 		
-		<button id="question" type="button" class="btn btn-primary">Why
-			do you decide to log these actions?</button>
-		<button id="stackoverflow" type="button" class="btn btn-primary">Stackoverflow Event Log</button>
+		<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Adaptive Web</a>
+    </div>
+    <ul class="nav navbar-nav ">
+      <li><a href="#" id="myButton">Log-In History</a></li>
+      <li><a href="#" id="question">Why do you decide to log these actions?</a></li>
+      <li><a href="#" id="stackoverflow">Stackoverflow Event Log</a></li>
+      <li><a href="#" id="visualization">Visualizations</a></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+      <li ><a href="#" id="logoutbutton">Log Out</a></li>
+	 </ul>
+      
+    
+  </div>
+</nav>
+		<!--  button id="myButton" type="button" class="btn btn-primary">See
+			Your Log-In History</button-->
+		
+		
+		
+		<!--  >button id="pieChart" type="button" class="btn btn-primary">Pie Chart</button>
+		<button id="barChart" type="button" class="btn btn-primary">Bar Chart</button>
+		<button id="bubblePlot" type="button" class="btn btn-primary">Bubble Plot</button>
+		<button id="scatterPlot" type="button" class="btn btn-primary">Scatter Plot</button-->
+		
+	
 			
 		<p class="container"></p>
 			
@@ -85,8 +110,7 @@
 
 	<div align="center">
 	<p></p>
-	<button id="logoutbutton" type="button" class="btn btn-primary" >Log
-			Out</button>
+	
 			
 	</div>
 
@@ -114,6 +138,34 @@
 			var ctx = "${pageContext.request.contextPath}"
 			location.href = ctx + "/stackoverflow";
 		};
+		
+		
+		
+	/*	document.getElementById("pieChart").onclick = function() {
+			var ctx = "${pageContext.request.contextPath}"
+			location.href = ctx + "/pieChart";
+		};
+		
+		document.getElementById("barChart").onclick = function() {
+			var ctx = "${pageContext.request.contextPath}"
+			location.href = ctx + "/barChart";
+		};
+		
+		document.getElementById("scatterPlot").onclick = function() {
+			var ctx = "${pageContext.request.contextPath}"
+			location.href = ctx + "/scatterPlot";
+		};
+		
+		document.getElementById("bubblePlot").onclick = function() {
+			var ctx = "${pageContext.request.contextPath}"
+			location.href = ctx + "/bubblePlot";
+		};  */
+		
+		document.getElementById("visualization").onclick = function() {
+			var ctx = "${pageContext.request.contextPath}"
+			location.href = ctx + "/visualization";
+		};
+
 	</script>
 
 

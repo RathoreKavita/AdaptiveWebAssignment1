@@ -1,5 +1,6 @@
 package com.adaptiveWeb.model;
 
+
 public class User {
 	
 	private String password;
