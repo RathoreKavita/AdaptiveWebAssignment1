@@ -173,21 +173,7 @@ public class HelloController {
 		return "successtack";
 	}
 
-	@RequestMapping(value="/wordTree", method = RequestMethod.GET)
-	public String wordTree(ModelMap model, HttpServletRequest request, HttpServletResponse response) {
-		HttpSession session= request.getSession();
-		String username=(String) session.getAttribute("username");
-		List<StackoverflowData> wordTreeData=eventDao.getWordTree(username);
-		stackOverflowDTO dto=new stackOverflowDTO();
-		dto.setList(wordTreeData);
-		JSONObject jsonObject = JSONObject.fromObject(dto);
-		String jsonStr = jsonObject.toString();
-		model.addAttribute("dataJson", jsonStr);  
-		System.out.println(wordTreeData.get(0));
-		//model.addAttribute("wordTreeData",wordTreeData );
-		return "wordTree";
-	}
-
+	
 
 	@RequestMapping(value="/pieChart", method = RequestMethod.GET)
 	public String pieChart(ModelMap model, HttpServletRequest request, HttpServletResponse response) {
