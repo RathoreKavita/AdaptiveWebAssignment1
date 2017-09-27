@@ -41,12 +41,7 @@ public class EventDao {
 		int result2=jdbcTemplate.update(sql2);
 	}
 
-	public List<StackoverflowData> getWordTree(String username) {
-		String sql = "select * from eventInfo where username='" + username + "' and flag='" + 1 + "' and parent <> "+ -2;		
-		List<StackoverflowData> data =jdbcTemplate.query(sql, new eventinfoMapper1()) ;
-		return data.size()>0? data:null;
-	}
-
+	
 	public List<PieChartData> getPieChart(String username) {
 		String sql= "SELECT eventType, COUNT(*) as count FROM eventinfo WHERE username=? GROUP BY eventType";
 		List<PieChartData> data =jdbcTemplate.query(sql, new Object[]{username}, new donutMapper()) ;
@@ -65,11 +60,11 @@ public class EventDao {
 	}
 
 	public List<ScatterPlotData> getScatterPlot(String username) {
-		//String sql1="CREATE VIEW table1 AS (SELECT username, count(eventType)as interactions FROM eventinfo GROUP BY username)"; 
-		//String sql2="CREATE VIEW table2 AS (SELECT username, eventType, count(*) as totalcout from logininfo where eventType= 'Log In' GROUP BY username, eventType )";
+		String sql1="CREATE VIEW table1 AS (SELECT username, count(eventType)as interactions FROM eventinfo GROUP BY username)"; 
+		String sql2="CREATE VIEW table2 AS (SELECT username, eventType, count(*) as totalcout from logininfo where eventType= 'Log In' GROUP BY username, eventType )";
 		String sql3="SELECT table1.username, table2.totalcout, table1.interactions FROM table1, table2 WHERE table1.username=table2.username";
-		//jdbcTemplate.execute(sql1);
-		//jdbcTemplate.execute(sql2);
+		jdbcTemplate.execute(sql1);
+		jdbcTemplate.execute(sql2);
 		List<ScatterPlotData> data=jdbcTemplate.query(sql3, new scatterMapper());
 
 		return data;
