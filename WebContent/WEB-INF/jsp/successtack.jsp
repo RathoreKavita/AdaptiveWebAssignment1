@@ -97,8 +97,6 @@
 	
 	<p></p>
 	
-	<button id="logoutbutton" type="button" class="btn btn-primary">Log
-			Out</button>
 	</div>
 
 
