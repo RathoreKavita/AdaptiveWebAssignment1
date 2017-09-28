@@ -107,7 +107,7 @@
 	<button id="barChart" type="button" class="btn btn-primary">Bar
 		Chart</button>
 	<button id="bubblePlot" type="button" class="btn btn-primary">Bubble
-		Plot</button>
+		Plot (BONUS)</button>
 	<button id="scatterPlot" type="button" class="btn btn-primary">Scatter
 		Plot</button>
 		<button id="findings" type="button" class="btn btn-primary">Patterns/Trends</button>

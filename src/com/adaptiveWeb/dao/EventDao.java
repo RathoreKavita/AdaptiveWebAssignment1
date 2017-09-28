@@ -45,7 +45,7 @@ public class EventDao {
 	public List<BarChartData> getbarChart(String username) {
 		String sql= "select eventType, sum(case when username  ='" + username + "' then 1 else 0 end) userCount,"
 				+ " sum(case when username <> '" + username + "' then 1 else 0 end) otherCount,"
-				+ "sum(case when username in ('aaa', 'bbb', 'ccc') then 1 else 0 end)/3 average"
+				+ "sum(case when username in ('aaa', 'bbb', 'ccc','ddd', 'eee') then 1 else 0 end)/5 average"
 				+ " from eventinfo group by eventType ";
 		List<BarChartData> data =jdbcTemplate.query(sql, new barMapper()) ;
 		return data.size()>0? data:null;
@@ -68,6 +68,20 @@ public class EventDao {
 		String sql="SELECT eventType, count(username) as usercount, count(eventType) as eventcount, sum(case when username ='" + username1 + "' then 1 else 0 end)/(SELECT count(*) from eventinfo where username='" + username1 + "' and eventType REGEXP 'Tag:.*') as avguser, sum(case when username <>'" + username1 + "' then 1 else 0 end)/(SELECT count(*) from eventinfo where username <> '" + username1 + "' and eventType REGEXP 'Tag:.*') as avgother from eventinfo where (eventType REGEXP 'Tag:.*')GROUP by eventType";
 		List<BubblePlotData> data=jdbcTemplate.query(sql, new bubbleMapper());
 		return data;
+	}
+
+
+
+
+	
+
+
+
+	public void updateRows() {
+		// TODO stub
+		String sql="DELETE FROM `eventinfo` WHERE eventType ='mouse idle'";
+		jdbcTemplate.execute(sql);
+		
 	}
 
 }

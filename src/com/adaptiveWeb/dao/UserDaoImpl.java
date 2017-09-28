@@ -70,6 +70,7 @@ public class UserDaoImpl implements UserDao{
 	public List<StackoverflowData> getStackoverflowData(String username) {
 		
 		String sql = "select * from eventinfo where username = ?";
+		
 		List<StackoverflowData> data =jdbcTemplate.query(sql, new Object[]{username}, new eventinfoMapper()) ;
 		return data.size()>0? data:null;
 		

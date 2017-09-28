@@ -63,7 +63,7 @@
 		<button id="pieChart" type="button" class="btn btn-primary">Pie Chart</button>
 		
 		<button id="barChart" type="button" class="btn btn-primary">Bar Chart</button>
-		<button id="bubblePlot" type="button" class="btn btn-primary">Bubble Plot</button>
+		<button id="bubblePlot" type="button" class="btn btn-primary">Bubble Plot (BONUS)</button>
 		<button id="scatterPlot" type="button" class="btn btn-primary">Scatter Plot</button>
 		<button id="findings" type="button" class="btn btn-primary">Patterns/Trends</button>
 		
