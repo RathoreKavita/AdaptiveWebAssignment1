@@ -154,13 +154,18 @@ public class HelloController {
 				+ "searching behaviour on Stackoverflow");
 		model.addAttribute("answer6", "5. SCATTER Plot, plots all the users as small circles.This is very useful in clustering the users"
 				+ "and that also very easily. We can identity some outliers also (different users from mass) within the blink of eye");
-		model.addAttribute("answer8", "In General, we can use all above data to profile user behaviour at an individual level as well as on a cluster level"
+		model.addAttribute("answer8", "WHY DOES IT MATTER:: In General, we can use all above data to profile user behaviour at an individual level as well as on a cluster level"
 				+ " and can change recommendation of questions and tags as per thier USER-MODEL");
 		model.addAttribute("answer4", "OVER THE TIME, we see a pattern, as the no of login of the user increases, the number of "
 				+ " total interactions of that user also increases. Also over the time the number of interactions per login decreases"
 				+ " which suggests that user has become acquainted with STACKOVERFLOW and reaches his desired goal quickly with less "
 				+ " no of interactions. Other pattern which is noticed over time is that no of favourite questions gets restricted to a particular domain, which can"
 				+ " be considered as the user expertise or area of interest.");
+		model.addAttribute("answer7", "LIST OF STEPS: To reach above findings/patterns , I have taken the average of all interactions"
+				+ " for all users apart from the one who is logged in. This helps in identifying how the user is different from rest. Also"
+				+ " I plotted number of interactions and no of login over various time-stamp and one can notice that no of interactions are"
+				+ " decreasing. From the BUBBLE PLOT, I calculated (using sql query) the average use of any tag for the user and compared"
+				+ " it with rest of the users, which helpe in identifying the area of interest of the user");
 		
 
 		return "visualization";
