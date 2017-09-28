@@ -156,6 +156,12 @@ public class HelloController {
 				+ "and that also very easily. We can identity some outliers also (different users from mass) within the blink of eye");
 		model.addAttribute("answer8", "In General, we can use all above data to profile user behaviour at an individual level as well as on a cluster level"
 				+ " and can change recommendation of questions and tags as per thier USER-MODEL");
+		model.addAttribute("answer4", "OVER THE TIME, we see a pattern, as the no of login of the user increases, the number of "
+				+ " total interactions of that user also increases. Also over the time the number of interactions per login decreases"
+				+ " which suggests that user has become acquainted with STACKOVERFLOW and reaches his desired goal quickly with less "
+				+ " no of interactions. Other pattern which is noticed over time is that no of favourite questions gets restricted to a particular domain, which can"
+				+ " be considered as the user expertise or area of interest.");
+		
 
 		return "visualization";
 	}
